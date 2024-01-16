@@ -1,0 +1,11 @@
+<launch>
+    <!-- Nodo Receiver -->
+    <node name="receiver" pkg="receiver" type="receiver.py" output="screen" />
+    <!-- Nodo CAN Sender -->
+    <node name="can_sender" pkg="can_sender" type="can_sender.py" output="screen" />
+
+    <!-- Rosbridge -->
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+
+</launch>
+
