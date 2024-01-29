@@ -23,6 +23,14 @@ echo "GPIO $MONITOR_PIN configurado como entrada"
 start_init_scripts() {
 	/home/ubuntu/catkin_ws/AGV_Scripts/canSetUp.sh &
 	/home/ubuntu/catkin_ws/AGV_Scripts/GPIO.sh &
+	
+	sleep 5
+
+	/home/ubuntu/catkin_ws/AGV_Scripts/motor_init.sh &
+
+	sleep 1
+
+	/home/ubuntu/catkin_ws/AGV_Scripts/motor_init.sh &
 	wait
 }
 
