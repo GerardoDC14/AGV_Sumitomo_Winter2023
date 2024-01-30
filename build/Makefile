@@ -285,108 +285,17 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
-# Target rules for targets named can_msgs_generate_messages_eus
+# Target rules for targets named geometry_msgs_generate_messages_cpp
 
 # Build rule for target.
-can_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 can_msgs_generate_messages_eus
-.PHONY : can_msgs_generate_messages_eus
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
 
 # fast build rule for target.
-can_msgs_generate_messages_eus/fast:
-	$(MAKE) -f can_sender/CMakeFiles/can_msgs_generate_messages_eus.dir/build.make can_sender/CMakeFiles/can_msgs_generate_messages_eus.dir/build
-.PHONY : can_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named can_msgs_generate_messages_py
-
-# Build rule for target.
-can_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 can_msgs_generate_messages_py
-.PHONY : can_msgs_generate_messages_py
-
-# fast build rule for target.
-can_msgs_generate_messages_py/fast:
-	$(MAKE) -f can_sender/CMakeFiles/can_msgs_generate_messages_py.dir/build.make can_sender/CMakeFiles/can_msgs_generate_messages_py.dir/build
-.PHONY : can_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named can_msgs_generate_messages_cpp
-
-# Build rule for target.
-can_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 can_msgs_generate_messages_cpp
-.PHONY : can_msgs_generate_messages_cpp
-
-# fast build rule for target.
-can_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f can_sender/CMakeFiles/can_msgs_generate_messages_cpp.dir/build.make can_sender/CMakeFiles/can_msgs_generate_messages_cpp.dir/build
-.PHONY : can_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named can_msgs_generate_messages_lisp
-
-# Build rule for target.
-can_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 can_msgs_generate_messages_lisp
-.PHONY : can_msgs_generate_messages_lisp
-
-# fast build rule for target.
-can_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f can_sender/CMakeFiles/can_msgs_generate_messages_lisp.dir/build.make can_sender/CMakeFiles/can_msgs_generate_messages_lisp.dir/build
-.PHONY : can_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_nodejs
-
-# Build rule for target.
-std_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f can_sender/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make can_sender/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named can_msgs_generate_messages_nodejs
-
-# Build rule for target.
-can_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 can_msgs_generate_messages_nodejs
-.PHONY : can_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-can_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f can_sender/CMakeFiles/can_msgs_generate_messages_nodejs.dir/build.make can_sender/CMakeFiles/can_msgs_generate_messages_nodejs.dir/build
-.PHONY : can_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_eus
-
-# Build rule for target.
-std_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f can_sender/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make can_sender/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_cpp
-
-# Build rule for target.
-std_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f can_sender/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make can_sender/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f control/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make control/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
@@ -398,8 +307,60 @@ std_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	$(MAKE) -f can_sender/CMakeFiles/std_msgs_generate_messages_py.dir/build.make can_sender/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f control/CMakeFiles/std_msgs_generate_messages_py.dir/build.make control/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_eus
+
+# Build rule for target.
+geometry_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	$(MAKE) -f control/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make control/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_eus
+
+# Build rule for target.
+std_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	$(MAKE) -f control/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make control/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_lisp
+
+# Build rule for target.
+geometry_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f control/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make control/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_nodejs
+
+# Build rule for target.
+geometry_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f control/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make control/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
@@ -411,8 +372,47 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f can_sender/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make can_sender/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f control/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make control/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
+
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f control/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make control/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_cpp
+
+# Build rule for target.
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_nodejs
+
+# Build rule for target.
+std_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named _catkin_empty_exported_target
@@ -449,16 +449,16 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... can_msgs_generate_messages_eus"
-	@echo "... can_msgs_generate_messages_py"
-	@echo "... can_msgs_generate_messages_cpp"
-	@echo "... can_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... can_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... _catkin_empty_exported_target"
 .PHONY : help
 

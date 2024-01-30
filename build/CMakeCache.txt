@@ -406,14 +406,29 @@ can_sender_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/can_sender
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
 
+//Value Computed by CMake
+control_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/control
+
+//Value Computed by CMake
+control_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/control
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
+
+//Value Computed by CMake
+direction_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/direction
+
+//Value Computed by CMake
+direction_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/direction
 
 //Value Computed by CMake
 drivetrain_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/src/drivetrain
 
 //Value Computed by CMake
 drivetrain_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/src/drivetrain
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/noetic/share/geometry_msgs/cmake
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/gtest/googlemock
@@ -508,6 +523,12 @@ ssh_receiver_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/receiver
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
+
+//Value Computed by CMake
+velocity_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/velocity
+
+//Value Computed by CMake
+velocity_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/velocity
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
@@ -660,7 +681,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

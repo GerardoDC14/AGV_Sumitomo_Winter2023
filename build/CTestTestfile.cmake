@@ -5,6 +5,8 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
-subdirs("can_sender")
+subdirs("control")
+subdirs("direction")
 subdirs("my_launch_files")
 subdirs("receiver")
+subdirs("velocity")
