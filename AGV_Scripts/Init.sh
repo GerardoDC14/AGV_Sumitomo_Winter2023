@@ -27,10 +27,6 @@ start_init_scripts() {
 	sleep 5
 
 	/home/ubuntu/catkin_ws/AGV_Scripts/motor_init.sh &
-
-	sleep 1
-
-	/home/ubuntu/catkin_ws/AGV_Scripts/motor_init.sh &
 	wait
 }
 
