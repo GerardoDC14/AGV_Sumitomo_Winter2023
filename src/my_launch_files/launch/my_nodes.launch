@@ -1,14 +1,4 @@
 <launch>
-#    <!-- Nodo Direccion  -->
-#    <node name="direction" pkg="direction" type="direction.py" output="screen" />
-
-#    <!-- Nodo Velocidad  -->
-#    <node name="velocity" pkg="velocity" type="velocity.py" output="screen" />
-
-#    <!-- Nodo Control  -->
-#    <node name="control" pkg="control" type="control.py" output="screen" />
-
-
     <!-- Nodo Control_SingleNode  -->
     <node name="receiver" pkg="receiver" type="receiver.py" output="screen" />
 
