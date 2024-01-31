@@ -4,17 +4,17 @@ from geometry_msgs.msg import Twist
 import subprocess
 
 # Global variables
-desired_velocity = 0  # This will now represent velocity in RPM (0 to 1000)
+desired_velocity = 0  
 direction_active = False  # Tracks if the direction joystick is active
 current_direction = 0     # Tracks the current direction from joystick #1
 straight = True
 
 def velocity_callback(msg):
     global desired_velocity
-    # Scale joystick input (0 to 10) to RPM range (0 to 100)
+    # Scale joystick input (0 to 10) to RPM range (0 to 500)
     dead_zone_threshold = 0.1
     if abs(msg.linear.y) > dead_zone_threshold:
-        desired_velocity = int(msg.linear.y * 50)  # Scale up to 100 RPM
+        desired_velocity = int(msg.linear.y * 50)  # Scale up to 500 RPM
     else:
         desired_velocity = 0
         stop_motors()  # Stop motors if velocity joystick is in the dead zone
@@ -34,7 +34,6 @@ def direction_callback(msg):
         current_direction = msg.linear.x
     else:
         direction_active = False
-        # Do not stop motors here; let the velocity joystick handle stopping
 
 def send_motor_commands():
     global current_direction, straight
