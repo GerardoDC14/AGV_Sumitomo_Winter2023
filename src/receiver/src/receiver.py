@@ -7,6 +7,7 @@ import subprocess
 desired_velocity = 0  # This will now represent velocity in RPM (0 to 1000)
 direction_active = False  # Tracks if the direction joystick is active
 current_direction = 0     # Tracks the current direction from joystick #1
+straight = True
 
 def velocity_callback(msg):
     global desired_velocity
@@ -21,26 +22,38 @@ def velocity_callback(msg):
     send_motor_commands()
 
 def direction_callback(msg):
-    global direction_active, current_direction
-    dead_zone_threshold = 0.3
+    global direction_active, current_direction, straight
+    dead_zone_threshold = 5
     if abs(msg.linear.y) > dead_zone_threshold:
         direction_active = True
+        straight = True
         current_direction = msg.linear.y
+    elif abs(msg.linear.x) > dead_zone_threshold:
+        direction_active = True
+        straight = False
+        current_direction = msg.linear.x
     else:
         direction_active = False
         # Do not stop motors here; let the velocity joystick handle stopping
 
 def send_motor_commands():
+    global current_direction, straight
     if direction_active:
-        direction_command_motor1, direction_command_motor2 = get_direction_commands(current_direction)
+        direction_command_motor1, direction_command_motor2 = get_direction_commands(current_direction, straight)
         send_velocity_command("602", direction_command_motor1)
         send_velocity_command("601", direction_command_motor2)
 
-def get_direction_commands(joystick_value):
+def get_direction_commands(joystick_value, straight):
     if joystick_value > 0:
-        return "cansend can0 602#2F7E600040", "cansend can0 601#2F7E600000"
+        if straight:
+            return "cansend can0 602#2F7E600040", "cansend can0 601#2F7E600000"  # Both motors forward
+        else:
+            return "cansend can0 602#2F7E600000", "cansend can0 601#2F7E600000"  # Right turn
     else:
-        return "cansend can0 602#2F7E600000", "cansend can0 601#2F7E600040"
+        if straight:
+            return "cansend can0 602#2F7E600000", "cansend can0 601#2F7E600040"  # Both motors backward
+        else:
+            return "cansend can0 602#2F7E600040", "cansend can0 601#2F7E600040"  # Left turn
 
 def send_velocity_command(motor_id, direction_command):
     global desired_velocity
