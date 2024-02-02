@@ -1,11 +1,10 @@
 #!/bin/bash
 
-# Define los números de pin GPIO en la Raspberry Pi
-PIN1=20  # Equivalente a GPIO 397 en Jetson
-PIN2=16  # Equivalente a GPIO 398 en Jetson
+# Define el número de pin GPIO en la Raspberry Pi para el buzzer
+PIN_BUZZER=26  # Pin 26 para el buzzer
 
-# Función para inicializar un pin
-init_pin() {
+# Función para inicializar el pin del buzzer
+init_buzzer_pin() {
     if [ ! -e /sys/class/gpio/gpio$1 ]; then
         echo $1 > /sys/class/gpio/export
         echo "GPIO $1 exportado"
@@ -18,20 +17,18 @@ init_pin() {
     echo "GPIO $1 inicializado a 0 (bajo)"
 }
 
-# Función para enviar un pulso
-pulse_pin() {
+# Función para enviar un pulso al buzzer
+pulse_buzzer() {
     echo "Enviando pulso alto a GPIO $1..."
     echo 1 > /sys/class/gpio/gpio$1/value
-    sleep 2
+    sleep 2  # Mantiene el buzzer activo por 2 segundos
     echo "Poniendo GPIO $1 a 0 (bajo)..."
     echo 0 > /sys/class/gpio/gpio$1/value
-    sleep 1
     echo "Pulso enviado a GPIO $1"
 }
 
-# Inicializa los pines
-init_pin $PIN1
-init_pin $PIN2
+# Inicializa el pin del buzzer
+init_buzzer_pin $PIN_BUZZER
 
-# Envía un pulso al PIN1 para reiniciar la ESP32(1)
-pulse_pin $PIN1
+# Envia un pulso al buzzer
+pulse_buzzer $PIN_BUZZER
