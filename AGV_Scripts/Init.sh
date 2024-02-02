@@ -2,6 +2,7 @@
 
 # Function to start initialization scripts
 start_init_scripts() {
+    sleep 10
     echo "Starting canSetUp.sh..."
     /home/ubuntu/catkin_ws/AGV_Scripts/canSetUp.sh
     sleep 5
